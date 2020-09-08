@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FoodApp</string>
+    <string name="enter_phone_number">Введите номер телефона</string>
+</resources>
