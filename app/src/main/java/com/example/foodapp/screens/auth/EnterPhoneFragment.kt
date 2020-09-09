@@ -41,8 +41,7 @@ class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
         if (phoneNumber.isEmpty()) {
             showToast("Введите номер")
         } else {
-            showToast("Вы авторизованы с номером $phoneNumber")
-            replaceFragment(MainMenuFragment())
+            replaceFragment(EnterCodeFragment(phoneNumber))
         }
     }
 

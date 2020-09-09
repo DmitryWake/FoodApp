@@ -1,17 +1,56 @@
 package com.example.foodapp.screens.auth
 
-import androidx.fragment.app.Fragment
+import android.widget.EditText
 import com.example.foodapp.R
+import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.base.BaseFragment
+import com.example.foodapp.utilities.APP_ACTIVITY
+import com.example.foodapp.utilities.AppTextWatcher
+import com.example.foodapp.utilities.replaceFragment
+import com.example.foodapp.utilities.showToast
+import kotlinx.android.synthetic.main.fragment_enter_code.*
 
 
-class EnterCodeFragment : BaseFragment(R.layout.fragment_enter_code) {
+class EnterCodeFragment(val phoneNumber: String) : BaseFragment(R.layout.fragment_enter_code) {
+
+    var code = "      "
+
     override fun onStart() {
         super.onStart()
         initFields()
     }
 
     private fun initFields() {
+        APP_ACTIVITY.title = phoneNumber
+        code_0.requestFocus()
+        code_0.addTextChangedListener(AppTextWatcher{
+            code = code_0.text.toString() + code.substring(1, 6)
+            code_1.requestFocus()
+            code_1.addTextChangedListener(AppTextWatcher {
+                code = code.first() + code_1.text.toString() + code.substring(2, 6)
+                code_2.requestFocus()
+                code_2.addTextChangedListener(AppTextWatcher {
+                    code = code.substring(0, 2) + code_2.text.toString() + code.substring(3, 6)
+                    code_3.requestFocus()
+                    code_3.addTextChangedListener(AppTextWatcher {
+                        code = code.substring(0, 3) + code_3.text.toString() + code.substring(4, 6)
+                        code_4.requestFocus()
+                        code_4.addTextChangedListener(AppTextWatcher {
+                            code = code.substring(0, 4) + code_4.text.toString() + code.last()
+                            code_5.requestFocus()
+                            code_5.addTextChangedListener(AppTextWatcher {
+                                code = code.substring(0, 5) + code_5.text.toString()
+                                enterCode()
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    }
 
+    private fun enterCode() {
+        showToast(code)
+        replaceFragment(MainMenuFragment())
     }
 }
