@@ -25,29 +25,12 @@ class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
 
     override fun onStart() {
         super.onStart()
-        callback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
-                AUTH.signInWithCredential(credential).addOnSuccessListener {
-                    val uid = AUTH.currentUser?.uid.toString()
-                    val dataMap = mutableMapOf<String, Any>()
+        initCallback()
+        initFields()
+    }
 
-                    dataMap[CHILD_ID] = uid
-                    dataMap[CHILD_PHONE] = phoneNumber
-
-                    REF_DATABASE_ROOT.child(NODE_USERS).child(uid).addListenerForSingleValueEvent(AppValueEventListener {
-                        if (!it.hasChild(CHILD_FULLNAME)) {
-                            showToast("Работает")
-                        }
-                    })
-                }
-            }
-
-            override fun onVerificationFailed(e: FirebaseException) {
-                showToast(e.message.toString())
-            }
-
-        }
-
+    private fun initFields() {
+        enter_phone_edit_text.requestFocus()
         btn_next.setOnClickListener {
             sendCode()
         }
@@ -60,6 +43,32 @@ class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
         } else {
             showToast("Вы авторизованы с номером $phoneNumber")
             replaceFragment(MainMenuFragment())
+        }
+    }
+
+    private fun initCallback() {
+        callback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
+                AUTH.signInWithCredential(credential).addOnSuccessListener {
+                    val uid = AUTH.currentUser?.uid.toString()
+                    val dataMap = mutableMapOf<String, Any>()
+
+                    dataMap[CHILD_ID] = uid
+                    dataMap[CHILD_PHONE] = phoneNumber
+
+                    REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
+                        .addListenerForSingleValueEvent(AppValueEventListener {
+                            if (!it.hasChild(CHILD_FULLNAME)) {
+                                showToast("Работает")
+                            }
+                        })
+                }
+            }
+
+            override fun onVerificationFailed(e: FirebaseException) {
+                showToast(e.message.toString())
+            }
+
         }
     }
 }

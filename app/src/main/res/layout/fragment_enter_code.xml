@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.auth.EnterCodeFragment">
+
+    <TextView
+        android:id="@+id/send_code_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/largeText"
+        android:text="Мы отправили код на ваш номер. Введите его ниже"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+
+    <ImageView
+        android:id="@+id/image_enter_code"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/phone_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/send_code_text"
+        android:layout_margin="@dimen/app_margin"/>
+
+    <TextView
+        android:id="@+id/enter_code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Введите код"
+        android:textSize="@dimen/normalText"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/image_enter_code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/app_margin"
+        android:gravity="center"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/enter_code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/enter_code_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/app_margin">
+
+        <EditText
+            android:id="@+id/code_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/code_1"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+        <EditText
+            android:id="@+id/code_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="@id/code_0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/code_2"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+        <EditText
+            android:id="@+id/code_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="@id/code_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/code_3"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+        <EditText
+            android:id="@+id/code_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="@id/code_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/code_4"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+        <EditText
+            android:id="@+id/code_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="@id/code_3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/code_5"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+        <EditText
+            android:id="@+id/code_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/editText"
+            android:hint="0"
+            app:layout_constraintStart_toStartOf="@id/code_4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/app_margin"
+            android:maxLength="1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/fast_food_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enter_code_layout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,32 +8,19 @@
 
     <TextView
         android:id="@+id/enter_phone_number_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/app_margin"
         android:text="@string/enter_phone_number"
-        android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/largeText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/largeText" />
 
     <EditText
         android:id="@+id/enter_phone_edit_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/app_margin"
         android:hint="+7 (999) 999 99-99"
-        android:textColorHint="@color/colorGrey"
-        android:textColor="@color/colorGrey"
-        android:importantForAutofill="no"
-        android:inputType="phone"
-        android:textSize="@dimen/normalText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/enter_phone_number_text"
-        android:padding="10dp"
-        />
+        style="@style/editText" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -47,13 +34,10 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/ic_arrow_left"
-        android:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="@dimen/app_margin"/>
+        style="@style/floatingButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
