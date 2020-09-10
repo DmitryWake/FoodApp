@@ -1,16 +1,14 @@
 package com.example.foodapp.screens.auth
 
-import android.widget.EditText
 import com.example.foodapp.R
 import com.example.foodapp.database.*
-import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.*
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_code.*
 
 
-class EnterCodeFragment(val phoneNumber: String, val id: String) :
+class EnterCodeFragment(private val phoneNumber: String, private val id: String) :
     BaseFragment(R.layout.fragment_enter_code) {
 
     var code = "      "
@@ -53,25 +51,7 @@ class EnterCodeFragment(val phoneNumber: String, val id: String) :
         showToast(code)
         val credential = PhoneAuthProvider.getCredential(id, code)
         AUTH.signInWithCredential(credential).addOnSuccessListener {
-            val uid = AUTH.currentUser?.uid.toString()
-            val dataMap = mutableMapOf<String, Any>()
-            dataMap[CHILD_ID] = uid
-            dataMap[CHILD_PHONE] = phoneNumber
-
-            REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
-                .addListenerForSingleValueEvent(AppValueEventListener {
-                    if (it.hasChild(CHILD_FULLNAME)) {
-                        showToast("Перейти на окно регистрации")
-                        restartActivity()
-                    } else {
-                        REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap)
-                            .addOnSuccessListener {
-                                showToast("Добро пожаловать!")
-                                restartActivity()
-                            }
-                            .addOnFailureListener { showToast(it.message.toString()) }
-                    }
-                })
+            signIn(phoneNumber)
         }
     }
 }

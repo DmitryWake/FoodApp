@@ -10,7 +10,6 @@ import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.auth.EnterPhoneFragment
 import com.example.foodapp.utilities.APP_ACTIVITY
 import com.example.foodapp.utilities.replaceFragment
-import com.example.foodapp.utilities.showToast
 
 class MainActivity : AppCompatActivity() {
 

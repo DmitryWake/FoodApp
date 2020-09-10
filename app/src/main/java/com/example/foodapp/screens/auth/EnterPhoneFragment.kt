@@ -1,17 +1,10 @@
 package com.example.foodapp.screens.auth
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.foodapp.R
 import com.example.foodapp.database.*
-import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.*
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_phone.*
@@ -58,8 +51,7 @@ class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
         callback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
                 AUTH.signInWithCredential(credential).addOnSuccessListener {
-                    showToast("Добро пожаловать")
-                    restartActivity()
+                    signIn(phoneNumber)
                 }.addOnFailureListener { showToast(it.message.toString()) }
             }
 
