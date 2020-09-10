@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import com.example.foodapp.database.AUTH
 import com.example.foodapp.database.initFirebase
 import com.example.foodapp.databinding.ActivityMainBinding
+import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.auth.EnterPhoneFragment
 import com.example.foodapp.utilities.APP_ACTIVITY
 import com.example.foodapp.utilities.replaceFragment
@@ -27,14 +28,17 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunc() {
         setSupportActionBar(toolbar)
-        replaceFragment(EnterPhoneFragment(), false)
+        if (AUTH.currentUser != null) {
+            replaceFragment(MainMenuFragment())
+        }
+        else
+            replaceFragment(EnterPhoneFragment(), false)
     }
 
     private fun initFields() {
         toolbar = binding.mainToolbar
         APP_ACTIVITY = this
     }
-
 
 
 }

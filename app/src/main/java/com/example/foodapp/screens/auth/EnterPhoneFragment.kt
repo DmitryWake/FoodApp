@@ -9,14 +9,13 @@ import com.example.foodapp.R
 import com.example.foodapp.database.*
 import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.base.BaseFragment
-import com.example.foodapp.utilities.AppValueEventListener
-import com.example.foodapp.utilities.replaceFragment
-import com.example.foodapp.utilities.showToast
+import com.example.foodapp.utilities.*
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_phone.*
+import java.util.concurrent.TimeUnit
 
 class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
 
@@ -37,35 +36,39 @@ class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
     }
 
     private fun sendCode() {
-        phoneNumber = enter_phone_edit_text.text.toString()
+        phoneNumber = enter_phone_edit_text.text.toString().formatPhoneNumber()
         if (phoneNumber.isEmpty()) {
             showToast("Введите номер")
         } else {
-            replaceFragment(EnterCodeFragment(phoneNumber))
+            authUser()
         }
+    }
+
+    private fun authUser() {
+        PhoneAuthProvider.getInstance().verifyPhoneNumber(
+            phoneNumber,
+            60,
+            TimeUnit.SECONDS,
+            APP_ACTIVITY,
+            callback
+        )
     }
 
     private fun initCallback() {
         callback = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
                 AUTH.signInWithCredential(credential).addOnSuccessListener {
-                    val uid = AUTH.currentUser?.uid.toString()
-                    val dataMap = mutableMapOf<String, Any>()
-
-                    dataMap[CHILD_ID] = uid
-                    dataMap[CHILD_PHONE] = phoneNumber
-
-                    REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
-                        .addListenerForSingleValueEvent(AppValueEventListener {
-                            if (!it.hasChild(CHILD_FULLNAME)) {
-                                showToast("Работает")
-                            }
-                        })
-                }
+                    showToast("Добро пожаловать")
+                    restartActivity()
+                }.addOnFailureListener { showToast(it.message.toString()) }
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
                 showToast(e.message.toString())
+            }
+
+            override fun onCodeSent(id: String, p1: PhoneAuthProvider.ForceResendingToken) {
+                replaceFragment(EnterCodeFragment(phoneNumber, id))
             }
 
         }

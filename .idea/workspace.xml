@@ -7,21 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c20b93-1cad-4410-9674-29d2bec5fa12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/utilities/AppTextWatcher.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/models/UserModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databaseValues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databaseValues.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterPhoneFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterPhoneFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/utilities/funs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/utilities/funs.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="bfd0971" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_25" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -30,7 +36,31 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view />
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FoodApp" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FoodApp" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="FoodApp" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="android" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -62,8 +92,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="bfd0971" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-08T18:24:00.225Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_5X_API_25" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-10T10:09:53.677Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ChatAppTest1" />
@@ -78,7 +108,7 @@
       <recent name="C:\Users\ADMIN\AndroidStudioProjects\FoodApp\app\src\main\res\drawable-v24" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.FoodApp [signingReport]">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -137,6 +167,30 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodApp [signingReport]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signingReport" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.FoodApp [signingReport]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\ADMIN\AppData\Roaming\Subversion</configuration>
@@ -170,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599645011535</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ввод текста в EnterCodeFragment.kt Переход на главный экран">
+      <created>1599647558693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1599647558693</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,17 +255,18 @@
     <MESSAGE value="Тестовый коммит" />
     <MESSAGE value="Создание EnterPhoneFragment.kt Реализация тулбара, первичная инициализация, переход на главный экран" />
     <MESSAGE value="Создание макета EnterCodeFragment.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание макета EnterCodeFragment.kt" />
+    <MESSAGE value="Ввод текста в EnterCodeFragment.kt Переход на главный экран" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ввод текста в EnterCodeFragment.kt Переход на главный экран" />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="106" key="#Notifications" timestamp="1599479845408">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="363" y="106" key="#Notifications/0.0.1600.900@0.0.1600.900" timestamp="1599479845408" />
-    <state x="591" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1599645288146">
+    <state x="591" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1599731854596">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="591" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1599645288146" />
+    <state x="591" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1599731854596" />
     <state x="579" y="114" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1599583823553">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -217,50 +279,50 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="658" y="263" key="AndroidCreateXmlResourceDialog/0.0.1600.900@0.0.1600.900" timestamp="1599590849280" />
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1599645007134">
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1599647555495">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1599645007134" />
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1599647555495" />
     <state width="399" height="466" key="DebuggerActiveHint" timestamp="1599647232136">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state width="399" height="466" key="DebuggerActiveHint/0.0.1600.900@0.0.1600.900" timestamp="1599647232136" />
-    <state x="580" y="205" key="FileChooserDialogImpl" timestamp="1599644808518">
+    <state x="580" y="205" key="FileChooserDialogImpl" timestamp="1599727987871">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1599644808518" />
-    <state width="1557" height="291" key="GridCell.Tab.0.bottom" timestamp="1599647169814">
+    <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1599727987871" />
+    <state width="1557" height="291" key="GridCell.Tab.0.bottom" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.0.center" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.0.center" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.0.left" timestamp="1599647169813">
+    <state width="1557" height="291" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.0.left" timestamp="1599647799664">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1599647169813" />
-    <state width="1557" height="291" key="GridCell.Tab.0.right" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1599647799664" />
+    <state width="1557" height="291" key="GridCell.Tab.0.right" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.1.bottom" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.1.bottom" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.1.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.1.center" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.1.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.1.center" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.1.center/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.1.left" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.1.center/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.1.left" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.1.left/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
-    <state width="1557" height="291" key="GridCell.Tab.1.right" timestamp="1599647169814">
+    <state width="1557" height="291" key="GridCell.Tab.1.left/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
+    <state width="1557" height="291" key="GridCell.Tab.1.right" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="291" key="GridCell.Tab.1.right/0.0.1600.900@0.0.1600.900" timestamp="1599647169814" />
+    <state width="1557" height="291" key="GridCell.Tab.1.right/0.0.1600.900@0.0.1600.900" timestamp="1599647799665" />
     <state x="149" y="67" key="SettingsEditor" timestamp="1599479925169">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -269,111 +331,5 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="456" y="205" key="run.anything.popup/0.0.1600.900@0.0.1600.900" timestamp="1599644724006" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>25</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>27</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>28</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>30</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>29</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>32</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>33</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>34</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>36</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>37</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>38</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>39</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt</url>
-          <line>40</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

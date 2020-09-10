@@ -2,16 +2,16 @@ package com.example.foodapp.screens.auth
 
 import android.widget.EditText
 import com.example.foodapp.R
+import com.example.foodapp.database.*
 import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.base.BaseFragment
-import com.example.foodapp.utilities.APP_ACTIVITY
-import com.example.foodapp.utilities.AppTextWatcher
-import com.example.foodapp.utilities.replaceFragment
-import com.example.foodapp.utilities.showToast
+import com.example.foodapp.utilities.*
+import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_code.*
 
 
-class EnterCodeFragment(val phoneNumber: String) : BaseFragment(R.layout.fragment_enter_code) {
+class EnterCodeFragment(val phoneNumber: String, val id: String) :
+    BaseFragment(R.layout.fragment_enter_code) {
 
     var code = "      "
 
@@ -23,7 +23,7 @@ class EnterCodeFragment(val phoneNumber: String) : BaseFragment(R.layout.fragmen
     private fun initFields() {
         APP_ACTIVITY.title = phoneNumber
         code_0.requestFocus()
-        code_0.addTextChangedListener(AppTextWatcher{
+        code_0.addTextChangedListener(AppTextWatcher {
             code = code_0.text.toString() + code.substring(1, 6)
             code_1.requestFocus()
             code_1.addTextChangedListener(AppTextWatcher {
@@ -51,6 +51,27 @@ class EnterCodeFragment(val phoneNumber: String) : BaseFragment(R.layout.fragmen
 
     private fun enterCode() {
         showToast(code)
-        replaceFragment(MainMenuFragment())
+        val credential = PhoneAuthProvider.getCredential(id, code)
+        AUTH.signInWithCredential(credential).addOnSuccessListener {
+            val uid = AUTH.currentUser?.uid.toString()
+            val dataMap = mutableMapOf<String, Any>()
+            dataMap[CHILD_ID] = uid
+            dataMap[CHILD_PHONE] = phoneNumber
+
+            REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
+                .addListenerForSingleValueEvent(AppValueEventListener {
+                    if (it.hasChild(CHILD_FULLNAME)) {
+                        showToast("Перейти на окно регистрации")
+                        restartActivity()
+                    } else {
+                        REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap)
+                            .addOnSuccessListener {
+                                showToast("Добро пожаловать!")
+                                restartActivity()
+                            }
+                            .addOnFailureListener { showToast(it.message.toString()) }
+                    }
+                })
+        }
     }
 }
