@@ -4,6 +4,7 @@ import com.example.foodapp.models.UserModel
 import com.example.foodapp.utilities.AppValueEventListener
 import com.example.foodapp.utilities.restartActivity
 import com.example.foodapp.utilities.showToast
+import com.example.foodapp.utilities.updateVersion
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -34,4 +35,19 @@ fun signIn(phoneNumber: String) {
                     .addOnFailureListener { showToast(it.message.toString()) }
             }
         })
+}
+
+fun checkVersion() {
+    REF_DATABASE_ROOT.child(CHILD_VERSION).addListenerForSingleValueEvent(AppValueEventListener{
+        if (APP_VERSION.toDouble() > it.value.toString().toDouble())
+            updateVersionToDatabase()
+        else if (APP_VERSION.toDouble() != it.value.toString().toDouble())
+            updateVersion()
+    })
+}
+
+fun updateVersionToDatabase() {
+    REF_DATABASE_ROOT.child(CHILD_VERSION).setValue(APP_VERSION).addOnFailureListener {
+        showToast(it.message.toString())
+    }
 }

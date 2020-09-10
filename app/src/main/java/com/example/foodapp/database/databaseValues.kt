@@ -4,7 +4,8 @@ import com.example.foodapp.models.UserModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 
-const val APP_VERSION = "0.1"
+const val APP_VERSION = "0.2"
+const val CHILD_VERSION = "version"
 
 lateinit var AUTH: FirebaseAuth
 lateinit var REF_DATABASE_ROOT: DatabaseReference
