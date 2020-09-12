@@ -7,18 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c20b93-1cad-4410-9674-29d2bec5fa12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/RegisterFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text_style.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/register_button_style.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databaseValues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databaseValues.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/utilities/funs.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/utilities/funs.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_code.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_phone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_phone.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
         <option value="valueResourceFile" />
         <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -243,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599745234412</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Автообновление">
+      <created>1599749326002</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599749326002</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,7 +278,8 @@
     <MESSAGE value="Ввод текста в EnterCodeFragment.kt Переход на главный экран" />
     <MESSAGE value="Первичная авторизация и инициализация модели пользователя" />
     <MESSAGE value="Изменение авторизации, так как на новых устройствах происходит автоматическая авторизация" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменение авторизации, так как на новых устройствах происходит автоматическая авторизация" />
+    <MESSAGE value="Автообновление" />
+    <option name="LAST_COMMIT_MESSAGE" value="Автообновление" />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="106" key="#Notifications" timestamp="1599479845408">
@@ -289,6 +298,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="380" y="205" key="AndroidCreateResourceDirectoryDialog/0.0.1600.900@0.0.1600.900" timestamp="1599643262930" />
+    <state x="380" y="205" key="AndroidCreateResourceFileDialog" timestamp="1599937991481">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="380" y="205" key="AndroidCreateResourceFileDialog/0.0.1600.900@0.0.1600.900" timestamp="1599937991481" />
     <state x="658" y="263" key="AndroidCreateXmlResourceDialog" timestamp="1599590849280">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -301,26 +314,26 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state width="399" height="466" key="DebuggerActiveHint/0.0.1600.900@0.0.1600.900" timestamp="1599647232136" />
-    <state x="580" y="205" key="FileChooserDialogImpl" timestamp="1599747807680">
+    <state x="580" y="205" key="FileChooserDialogImpl" timestamp="1599847334500">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1599747807680" />
-    <state width="1557" height="235" key="GridCell.Tab.0.bottom" timestamp="1599743433974">
+    <state x="580" y="205" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1599847334500" />
+    <state width="1557" height="235" key="GridCell.Tab.0.bottom" timestamp="1599759634277">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599743433974" />
-    <state width="1557" height="235" key="GridCell.Tab.0.center" timestamp="1599743433974">
+    <state width="1557" height="235" key="GridCell.Tab.0.bottom/0.0.1600.900@0.0.1600.900" timestamp="1599759634277" />
+    <state width="1557" height="235" key="GridCell.Tab.0.center" timestamp="1599759634276">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1599743433974" />
-    <state width="1557" height="235" key="GridCell.Tab.0.left" timestamp="1599743433905">
+    <state width="1557" height="235" key="GridCell.Tab.0.center/0.0.1600.900@0.0.1600.900" timestamp="1599759634276" />
+    <state width="1557" height="235" key="GridCell.Tab.0.left" timestamp="1599759634239">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1599743433905" />
-    <state width="1557" height="235" key="GridCell.Tab.0.right" timestamp="1599743433974">
+    <state width="1557" height="235" key="GridCell.Tab.0.left/0.0.1600.900@0.0.1600.900" timestamp="1599759634239" />
+    <state width="1557" height="235" key="GridCell.Tab.0.right" timestamp="1599759634277">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state width="1557" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1599743433974" />
+    <state width="1557" height="235" key="GridCell.Tab.0.right/0.0.1600.900@0.0.1600.900" timestamp="1599759634277" />
     <state width="1557" height="291" key="GridCell.Tab.1.bottom" timestamp="1599647799665">
       <screen x="0" y="0" width="1600" height="900" />
     </state>

@@ -1,10 +1,8 @@
 package com.example.foodapp.database
 
 import com.example.foodapp.models.UserModel
-import com.example.foodapp.utilities.AppValueEventListener
-import com.example.foodapp.utilities.restartActivity
-import com.example.foodapp.utilities.showToast
-import com.example.foodapp.utilities.updateVersion
+import com.example.foodapp.screens.auth.RegisterFragment
+import com.example.foodapp.utilities.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -24,8 +22,7 @@ fun signIn(phoneNumber: String) {
     REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
         .addListenerForSingleValueEvent(AppValueEventListener {
             if (it.hasChild(CHILD_FULLNAME)) {
-                showToast("Перейти на окно регистрации")
-                restartActivity()
+                replaceFragment(RegisterFragment())
             } else {
                 REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap)
                     .addOnSuccessListener {

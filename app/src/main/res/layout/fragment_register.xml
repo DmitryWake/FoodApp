@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.auth.RegisterFragment">
+
+    <TextView
+        android:id="@+id/register_text"
+        style="@style/largeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:gravity="center"
+        android:text="Регистрация нового
+        пользователя"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_text_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Имя:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_text" />
+
+
+    <EditText
+        android:id="@+id/register_edit_text_first_name"
+        style="@style/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите имя"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/register_text_first_name"
+        app:layout_constraintTop_toBottomOf="@id/register_text_first_name" />
+
+    <TextView
+        android:id="@+id/register_text_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Фамилия:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_edit_text_first_name" />
+
+
+    <EditText
+        android:id="@+id/register_edit_text_last_name"
+        style="@style/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите фамилию"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/register_text_last_name"
+        app:layout_constraintTop_toBottomOf="@id/register_text_last_name" />
+
+    <TextView
+        android:id="@+id/register_text_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Email:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintTop_toBottomOf="@id/register_edit_text_last_name"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/register_edit_text_email"
+        style="@style/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="@id/register_text_email"
+        app:layout_constraintTop_toBottomOf="@id/register_text_email" />
+
+    <TextView
+    android:id="@+id/register_text_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/app_margin"
+    android:text="Дата рождения:"
+    android:textColor="@color/colorPrimary"
+    android:textSize="@dimen/normalText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/register_edit_text_email" />
+
+
+    <EditText
+        android:id="@+id/register_edit_text_date"
+        style="@style/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="__.__.____"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@id/register_text_date"
+        app:layout_constraintTop_toBottomOf="@id/register_text_date" />
+
+    <TextView
+        android:id="@+id/register_text_promo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Промокод:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintStart_toEndOf="@id/register_text_date"
+        app:layout_constraintTop_toBottomOf="@id/register_edit_text_email" />
+
+
+    <EditText
+        android:id="@+id/register_edit_text_promo"
+        style="@style/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Введите промокод"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@id/register_text_promo"
+        app:layout_constraintTop_toBottomOf="@id/register_text_promo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/app_margin"
+        android:text="Регистрация"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/largeText"
+        android:background="@drawable/register_button_style"
+        android:padding="15dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

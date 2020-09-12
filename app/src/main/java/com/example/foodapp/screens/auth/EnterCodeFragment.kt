@@ -48,10 +48,11 @@ class EnterCodeFragment(private val phoneNumber: String, private val id: String)
     }
 
     private fun enterCode() {
-        showToast(code)
         val credential = PhoneAuthProvider.getCredential(id, code)
         AUTH.signInWithCredential(credential).addOnSuccessListener {
             signIn(phoneNumber)
+        }.addOnFailureListener {
+            showToast(it.message.toString())
         }
     }
 }
