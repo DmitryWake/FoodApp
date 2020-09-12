@@ -7,18 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c20b93-1cad-4410-9674-29d2bec5fa12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/RegisterFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edit_text_style.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/register_button_style.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/auth/EnterCodeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_code.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_code.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_phone.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_enter_phone.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599749326002</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Создание фрагмента регистрации и переход на него, если пользователь не зарегистрирован">
+      <created>1599939419798</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599939419799</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +275,8 @@
     <MESSAGE value="Первичная авторизация и инициализация модели пользователя" />
     <MESSAGE value="Изменение авторизации, так как на новых устройствах происходит автоматическая авторизация" />
     <MESSAGE value="Автообновление" />
-    <option name="LAST_COMMIT_MESSAGE" value="Автообновление" />
+    <MESSAGE value="Создание фрагмента регистрации и переход на него, если пользователь не зарегистрирован" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создание фрагмента регистрации и переход на него, если пользователь не зарегистрирован" />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="106" key="#Notifications" timestamp="1599479845408">
@@ -306,10 +303,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="658" y="263" key="AndroidCreateXmlResourceDialog/0.0.1600.900@0.0.1600.900" timestamp="1599590849280" />
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1599749318453">
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1599939415306">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1599749318453" />
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1599939415306" />
     <state width="399" height="466" key="DebuggerActiveHint" timestamp="1599647232136">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
