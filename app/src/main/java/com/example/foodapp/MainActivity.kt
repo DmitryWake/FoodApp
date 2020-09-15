@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import com.example.foodapp.database.AUTH
 import com.example.foodapp.database.checkVersion
 import com.example.foodapp.database.initFirebase
+import com.example.foodapp.database.initUser
 import com.example.foodapp.databinding.ActivityMainBinding
 import com.example.foodapp.screens.MainMenuFragment
 import com.example.foodapp.screens.auth.EnterPhoneFragment
@@ -22,9 +23,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initFirebase()
-        initFields()
-        initFunc()
+        initUser {
+            initFields()
+            initFunc()
+        }
     }
+
 
     override fun onStart() {
         super.onStart()
@@ -35,8 +39,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         if (AUTH.currentUser != null) {
             replaceFragment(MainMenuFragment())
-        }
-        else
+        } else
             replaceFragment(EnterPhoneFragment(), false)
     }
 

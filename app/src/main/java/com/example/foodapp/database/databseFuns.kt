@@ -13,29 +13,30 @@ fun initFirebase() {
     USER = UserModel()
 }
 
+fun initUser(function: () -> Unit) {
+    REF_DATABASE_ROOT.child(NODE_USERS).child(CURRENT_UID)
+        .addListenerForSingleValueEvent(AppValueEventListener {
+            USER = it.getValue(UserModel::class.java) ?: UserModel()
+            function()
+        })
+}
+
 fun signIn(phoneNumber: String) {
     val uid = AUTH.currentUser?.uid.toString()
-    val dataMap = mutableMapOf<String, Any>()
-    dataMap[CHILD_ID] = uid
-    dataMap[CHILD_PHONE] = phoneNumber
 
     REF_DATABASE_ROOT.child(NODE_USERS).child(uid)
         .addListenerForSingleValueEvent(AppValueEventListener {
-            if (it.hasChild(CHILD_FULLNAME)) {
-                replaceFragment(RegisterFragment())
+            if (!it.hasChild(CHILD_FULLNAME)) {
+                replaceFragment(RegisterFragment(phoneNumber, uid))
             } else {
-                REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(dataMap)
-                    .addOnSuccessListener {
-                        showToast("Добро пожаловать!")
-                        restartActivity()
-                    }
-                    .addOnFailureListener { showToast(it.message.toString()) }
+                showToast("Добро пожаловать!")
+                restartActivity()
             }
         })
 }
 
 fun checkVersion() {
-    REF_DATABASE_ROOT.child(CHILD_VERSION).addListenerForSingleValueEvent(AppValueEventListener{
+    REF_DATABASE_ROOT.child(CHILD_VERSION).addListenerForSingleValueEvent(AppValueEventListener {
         if (APP_VERSION.toDouble() > it.value.toString().toDouble())
             updateVersionToDatabase()
         else if (APP_VERSION.toDouble() != it.value.toString().toDouble())
