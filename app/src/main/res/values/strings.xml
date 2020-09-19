@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">FoodApp</string>
     <string name="enter_phone_number">Введите номер телефона</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_drawer_order_history">История заказов</string>
+    <string name="app_drawer_cafe">Заведения</string>
+    <string name="app_drawer_settings">Настройки</string>
+    <string name="app_drawer_help">Связь с поддержкой</string>
+    <string name="app_drawer_shopper">Корзина</string>
 </resources>
