@@ -8,7 +8,7 @@ import com.example.foodapp.database.checkVersion
 import com.example.foodapp.database.initFirebase
 import com.example.foodapp.database.initUser
 import com.example.foodapp.databinding.ActivityMainBinding
-import com.example.foodapp.screens.MainMenuFragment
+import com.example.foodapp.screens.MainMenu.MainMenuFragment
 import com.example.foodapp.screens.auth.EnterPhoneFragment
 import com.example.foodapp.screens.objects.AppDrawer
 import com.example.foodapp.utilities.APP_ACTIVITY

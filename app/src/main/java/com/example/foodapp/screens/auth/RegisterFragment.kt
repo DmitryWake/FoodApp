@@ -18,6 +18,7 @@ class RegisterFragment(val phoneNumber: String, val uid: String) :
         super.onStart()
         userData[CHILD_ID] = uid
         userData[CHILD_PHONE] = phoneNumber
+        userData[CHILD_PERMISSION] = PERMISSION_USER
         register_button.setOnClickListener {
             if (collectData()) {
                 REF_DATABASE_ROOT.child(NODE_USERS).child(uid).updateChildren(userData)

@@ -7,4 +7,5 @@
     <string name="app_drawer_settings">Настройки</string>
     <string name="app_drawer_help">Связь с поддержкой</string>
     <string name="app_drawer_shopper">Корзина</string>
+    <string name="menu_category_text">Категории меню</string>
 </resources>
