@@ -16,7 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_main_menu.*
 import kotlinx.android.synthetic.main.menu_item.view.*
 
-class MainMenuFragment : BaseFragment(R.layout.fragment_main_menu) {
+class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
 
     private lateinit var addCategoryButton: FloatingActionButton
 
@@ -30,8 +30,10 @@ class MainMenuFragment : BaseFragment(R.layout.fragment_main_menu) {
     private lateinit var mRecyclerView: RecyclerView
     private lateinit var mAdapter: RecyclerView.Adapter<MenuViewHolder>
 
+
     override fun onResume() {
         super.onResume()
+        APP_ACTIVITY.mAppDrawer.enableDrawer()
         APP_ACTIVITY.title = getString(R.string.menu_category_text)
         initRecyclerView()
         initAddButton()

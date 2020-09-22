@@ -1,5 +1,6 @@
 package com.example.foodapp.screens.auth
 
+import androidx.fragment.app.Fragment
 import com.example.foodapp.R
 import com.example.foodapp.database.*
 import com.example.foodapp.screens.base.BaseFragment
@@ -9,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_register.*
 
 
 class RegisterFragment(val phoneNumber: String, val uid: String) :
-    BaseFragment(R.layout.fragment_register) {
+    Fragment(R.layout.fragment_register) {
 
     private var userData = mutableMapOf<String, Any>()
 

@@ -1,5 +1,6 @@
 package com.example.foodapp.screens.auth
 
+import androidx.fragment.app.Fragment
 import com.example.foodapp.R
 import com.example.foodapp.database.*
 import com.example.foodapp.screens.base.BaseFragment
@@ -10,7 +11,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.fragment_enter_phone.*
 import java.util.concurrent.TimeUnit
 
-class EnterPhoneFragment : BaseFragment(R.layout.fragment_enter_phone) {
+class EnterPhoneFragment : Fragment(R.layout.fragment_enter_phone) {
 
     private lateinit var phoneNumber: String
     private lateinit var callback: PhoneAuthProvider.OnVerificationStateChangedCallbacks

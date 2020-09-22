@@ -11,24 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78c20b93-1cad-4410-9674-29d2bec5fa12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/edit_content/AddMenuCategoryFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_done.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_add_menu_category.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/database/databseFuns.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/MainMenu/MainMenuFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/MainMenu/MainMenuFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_register.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ru-rRU/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/base/BaseFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/base/BaseFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/objects/AppDrawer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/foodapp/screens/objects/AppDrawer.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600801651170</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Добавление категории в базу данных">
+      <created>1600803997109</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600803997109</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,7 +333,8 @@
     <MESSAGE value="Реализация AppDrawer.kt" />
     <MESSAGE value="Подготовка RecyclerView" />
     <MESSAGE value="Создание разрешений пользователя: admin, user. Создание кнопки добавления категории меню, создание модели категории меню." />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание разрешений пользователя: admin, user. Создание кнопки добавления категории меню, создание модели категории меню." />
+    <MESSAGE value="Добавление категории в базу данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление категории в базу данных" />
   </component>
   <component name="WindowStateProjectService">
     <state x="363" y="106" key="#Notifications" timestamp="1599479845408">
@@ -372,10 +365,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="889" y="250" key="AndroidCreateXmlResourceDialog/0.0.1600.900@0.0.1600.900" timestamp="1600802760397" />
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1600801640708">
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2" timestamp="1600803988860">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1600801640708" />
+    <state x="87" y="0" width="1174" height="732" key="CommitChangelistDialog2/0.0.1600.900@0.0.1600.900" timestamp="1600803988860" />
     <state width="419" height="466" key="DebuggerActiveHint" timestamp="1600077570651">
       <screen x="0" y="0" width="1600" height="900" />
     </state>

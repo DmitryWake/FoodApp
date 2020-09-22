@@ -84,4 +84,22 @@ class AppDrawer {
         mHeader = AccountHeaderBuilder().withActivity(APP_ACTIVITY)
             .withHeaderBackground(R.drawable.header).addProfiles(mCurrentProfile).build()
     }
+
+    fun disableDrawer() {
+        mDrawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = false
+        APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+        APP_ACTIVITY.toolbar.setNavigationOnClickListener {
+            APP_ACTIVITY.supportFragmentManager.popBackStack()
+        }
+    }
+
+    fun enableDrawer() {
+        APP_ACTIVITY.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        mDrawer.actionBarDrawerToggle?.isDrawerIndicatorEnabled = true
+        mDrawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+        APP_ACTIVITY.toolbar.setNavigationOnClickListener {
+            mDrawer.openDrawer()
+        }
+    }
 }
