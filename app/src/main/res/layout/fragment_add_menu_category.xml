@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.edit_content.AddMenuCategoryFragment">
+
+    <TextView
+        android:id="@+id/add_category_text"
+        style="@style/largeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:gravity="center"
+        android:text="@string/add_category_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/add_category_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/add_category_name_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_category_text" />
+
+
+    <EditText
+        android:id="@+id/add_category_name_edit_text"
+        style="@style/editText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_category_name_edit_text"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@id/add_category_name_text"
+        app:layout_constraintTop_toBottomOf="@id/add_category_name_text" />
+
+    <TextView
+        android:id="@+id/add_category_name_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/add_category_name_image"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/normalText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_category_name_edit_text" />
+
+    <Button
+        android:id="@+id/add_category_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/register_button_style"
+        android:padding="12dp"
+        android:text="Загрузить\n изображение"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/smallText"
+        app:layout_constraintTop_toBottomOf="@id/add_category_name_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/add_category_name_preview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/app_margin"
+        android:text="@string/add_category_preview_text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/largeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_category_button" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_category_preview"
+        android:layout_width="@dimen/menu_item_width"
+        android:layout_height="@dimen/menu_item_height"
+        app:layout_constraintTop_toBottomOf="@id/add_category_name_preview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/edit_text_style">
+
+        <ImageView
+            android:id="@+id/menu_image"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:src="@drawable/ic_base_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/app_margin"/>
+
+        <TextView
+            android:id="@+id/menu_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_item_category_text"
+            style= "@style/normalText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add_category_done"
+        android:src="@drawable/ic_done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/floatingButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

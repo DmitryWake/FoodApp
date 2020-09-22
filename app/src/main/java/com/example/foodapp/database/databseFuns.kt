@@ -49,3 +49,12 @@ fun updateVersionToDatabase() {
         showToast(it.message.toString())
     }
 }
+
+fun addCategory(mCategoryData: MutableMap<String, Any>, function: () -> Unit) {
+    REF_DATABASE_ROOT.child(NODE_CATEGORY).child(mCategoryData[CHILD_ID].toString())
+        .updateChildren(mCategoryData).addOnSuccessListener {
+            function()
+        }.addOnFailureListener {
+            showToast(it.message.toString())
+        }
+}

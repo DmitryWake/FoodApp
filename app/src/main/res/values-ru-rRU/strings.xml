@@ -8,4 +8,21 @@
     <string name="app_drawer_help">Связь с поддержкой</string>
     <string name="app_drawer_shopper">Корзина</string>
     <string name="menu_category_text">Категории меню</string>
+    <string name="register_user_text">Регистрация нового пользователя</string>
+    <string name="register_text_first_name">Имя:</string>
+    <string name="register_edit_text_first_name">Введите имя</string>
+    <string name="register_text_last_name">Фамилия:</string>
+    <string name="register_edit_text_last_name">Введите фамилию</string>
+    <string name="register_text_email">Email:</string>
+    <string name="register_edit_text_email">Введите email</string>
+    <string name="register_edit_text_date">__.__.____</string>
+    <string name="register_text_promo">Промокод:</string>
+    <string name="register_edit_text_promo">Промокод</string>
+    <string name="register_button_text">Регистрация</string>
+    <string name="add_category_text">Создание новой категории</string>
+    <string name="add_category_name_text">Название категории:</string>
+    <string name="add_category_name_edit_text">Введите название</string>
+    <string name="add_category_name_image">Загрузите изображение</string>
+    <string name="add_category_preview_text">Предпросмотр</string>
+    <string name="menu_item_category_text">Категория меню</string>
 </resources>

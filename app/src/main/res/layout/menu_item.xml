@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="180dp"
-    android:layout_height="180dp"
+    android:layout_width="@dimen/menu_item_width"
+    android:layout_height="@dimen/menu_item_height"
     android:layout_margin="@dimen/app_margin"
     android:background="@drawable/edit_text_style"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -21,7 +21,7 @@
         android:id="@+id/menu_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Категория меню"
+        android:text="@string/menu_item_category_text"
         style= "@style/normalText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

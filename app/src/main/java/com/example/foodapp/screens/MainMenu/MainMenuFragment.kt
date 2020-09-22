@@ -6,15 +6,17 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.R
 import com.example.foodapp.database.PERMISSION_ADMIN
-import com.example.foodapp.database.PERMISSION_USER
 import com.example.foodapp.database.USER
+import com.example.foodapp.screens.base.BaseFragment
+import com.example.foodapp.screens.edit_content.AddMenuCategoryFragment
 import com.example.foodapp.utilities.APP_ACTIVITY
+import com.example.foodapp.utilities.replaceFragment
 import com.example.foodapp.utilities.showToast
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_main_menu.*
 import kotlinx.android.synthetic.main.menu_item.view.*
 
-class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
+class MainMenuFragment : BaseFragment(R.layout.fragment_main_menu) {
 
     private lateinit var addCategoryButton: FloatingActionButton
 
@@ -41,7 +43,7 @@ class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
             PERMISSION_ADMIN -> {
                 addCategoryButton.visibility = View.VISIBLE
                 addCategoryButton.setOnClickListener {
-                    showToast("Ok!")
+                    replaceFragment(AddMenuCategoryFragment())
                 }
             }
             else -> addCategoryButton.visibility = View.GONE

@@ -4,4 +4,6 @@
     <dimen name="normalText">20sp</dimen>
     <dimen name="smallText">18sp</dimen>
     <dimen name="largeText">24sp</dimen>
+    <dimen name="menu_item_width">180dp</dimen>
+    <dimen name="menu_item_height">180dp</dimen>
 </resources>
