@@ -85,7 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/app_margin"
-        android:background="@drawable/edit_text_style">
+        android:background="@drawable/stroke_panel_style">
 
         <ImageView
             android:id="@+id/menu_image"

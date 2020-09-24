@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.settings.SettingsFragment">
+
+    <TextView
+        android:id="@+id/setting_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/largeText"
+        android:text="@string/settings_text"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/app_margin"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_block_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setting_text"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/stroke_panel_style"
+        android:padding="@dimen/app_padding"
+        >
+
+        <TextView
+            android:id="@+id/settings_fullname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:text="Имя\nФамилия"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:text="01.01.0001"
+            app:layout_constraintTop_toBottomOf="@id/settings_fullname_text"
+            app:layout_constraintEnd_toEndOf="@id/settings_fullname_text"/>
+
+        <ImageView
+            android:id="@+id/settings_user_edit"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintTop_toTopOf="@id/settings_fullname_text"
+            app:layout_constraintBottom_toBottomOf="@id/settings_date_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/edit_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_block_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_block_user"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/stroke_panel_style"
+        android:padding="@dimen/app_padding"
+        >
+
+        <TextView
+            android:id="@+id/settings_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:text="+79209461797"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_id_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:text="ID: RNHnAbGc8APOdTNOedOaACNuNDx1"
+            app:layout_constraintTop_toBottomOf="@id/settings_phone_text"
+            app:layout_constraintEnd_toEndOf="@id/settings_phone_text"
+            android:maxLines="2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_block_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_block_id"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/stroke_panel_style"
+        android:padding="@dimen/app_padding"
+        >
+
+        <TextView
+            android:id="@+id/settings_email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/colorBlack"
+            android:text="example@gmail.com"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/settings_check_mailing_box"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:layout_constraintEnd_toStartOf="@id/settings_check_mailing_text"
+            app:layout_constraintTop_toBottomOf="@id/settings_email_text"
+            app:layout_constraintBottom_toBottomOf="@id/settings_check_mailing_text"
+            android:background="@drawable/stroke_panel_style"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" />
+
+        <TextView
+            android:id="@+id/settings_check_mailing_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            android:text="Получать рассылку"
+            app:layout_constraintTop_toBottomOf="@id/settings_email_text"
+            app:layout_constraintEnd_toEndOf="@id/settings_email_text"/>
+
+        <ImageView
+            android:id="@+id/settings_email_edit"
+            style="@style/edit_button"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintTop_toTopOf="@id/settings_email_text"
+            app:layout_constraintBottom_toBottomOf="@id/settings_check_mailing_text"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings_block_bonus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_block_email"
+        android:layout_margin="@dimen/app_margin"
+        android:background="@drawable/stroke_panel_style"
+        android:padding="@dimen/app_padding"
+        >
+
+        <TextView
+            android:id="@+id/settings_bonus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:text="Бонусный\nСчёт"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_bonus_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@color/colorBlack"
+            android:text="0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/settings_bonus_icon"
+            android:layout_marginEnd="@dimen/app_margin"
+            android:layout_marginRight="@dimen/app_margin" />
+
+        <ImageView
+            android:id="@+id/settings_bonus_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_bonuses"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/app_margin"
+            android:layout_marginLeft="@dimen/app_margin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/settings_button_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/common_button"
+        android:textSize="@dimen/smallText"
+        android:text="Настроить\nадреса доставки"
+        app:layout_constraintTop_toBottomOf="@id/settings_block_bonus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/settings_button_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/common_button"
+        android:textSize="@dimen/smallText"
+        android:text="Выйти\nиз профиля"
+        app:layout_constraintTop_toBottomOf="@id/settings_block_bonus"
+        app:layout_constraintStart_toEndOf="@id/settings_button_address"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

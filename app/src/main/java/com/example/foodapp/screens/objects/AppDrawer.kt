@@ -4,8 +4,10 @@ import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.foodapp.R
 import com.example.foodapp.database.USER
+import com.example.foodapp.screens.settings.SettingsFragment
 import com.example.foodapp.utilities.APP_ACTIVITY
 import com.example.foodapp.utilities.CURRENT_PROFILE_IDENTIFIER
+import com.example.foodapp.utilities.replaceFragment
 import com.example.foodapp.utilities.showToast
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
@@ -71,7 +73,7 @@ class AppDrawer {
             1 -> showToast("Корзина")
             2 -> showToast("История заказов")
             3 -> showToast("Рестораны")
-            5 -> showToast("Настройки")
+            5 -> replaceFragment(SettingsFragment())
             6 -> showToast("Помощь")
         }
     }
