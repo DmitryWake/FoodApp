@@ -1,9 +1,11 @@
 package com.example.foodapp.screens.settings
 
+import android.annotation.SuppressLint
 import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.foodapp.R
+import com.example.foodapp.database.USER
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.showToast
 import kotlinx.android.synthetic.main.fragment_settings.*
@@ -27,7 +29,16 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     override fun onResume() {
         super.onResume()
         initFields()
+        insertUserData()
         initFunc()
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun insertUserData() {
+        mFullnameText.text = USER.fullname.replace(' ', '\n')
+        mPhoneNumberText.text = USER.phone
+        mIdText.text = "ID: " + USER.id
+        mEmailText.text = USER.email
     }
 
     private fun initFunc() {
