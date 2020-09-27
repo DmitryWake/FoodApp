@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 import com.example.foodapp.R
 import com.example.foodapp.database.*
 import com.example.foodapp.screens.DatePickerFragment
+import com.example.foodapp.utilities.DIALOG_DATE
+import com.example.foodapp.utilities.REQUEST_DATE
 import com.example.foodapp.utilities.restartActivity
 import com.example.foodapp.utilities.showToast
 import kotlinx.android.synthetic.main.fragment_register.*
@@ -24,11 +26,6 @@ class RegisterFragment(private val phoneNumber: String, private val uid: String)
     Fragment() {
 
     private lateinit var mEditDateText: TextView
-
-    companion object {
-        private const val DIALOG_DATE = "DialogDate"
-        private const val REQUEST_DATE = 0
-    }
 
     private var userData = mutableMapOf<String, Any>()
 

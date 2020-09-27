@@ -7,8 +7,6 @@
     <string name="app_drawer_help">Связь с поддержкой</string>
     <string name="app_drawer_shopper">Корзина</string>
     <string name="menu_category_text">Категории меню</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register_user_text">Регистрация нового пользователя</string>
     <string name="register_text_first_name">Имя:</string>
     <string name="register_edit_text_first_name">Введите имя</string>
