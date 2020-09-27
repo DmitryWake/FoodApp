@@ -58,3 +58,8 @@ fun addCategory(mCategoryData: MutableMap<String, Any>, function: () -> Unit) {
             showToast(it.message.toString())
         }
 }
+
+fun signOutAndRestart() {
+    AUTH.signOut()
+    restartActivity()
+}

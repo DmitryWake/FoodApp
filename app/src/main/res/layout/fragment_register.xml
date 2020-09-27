@@ -96,13 +96,13 @@
         app:layout_constraintTop_toBottomOf="@id/register_edit_text_email" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/register_edit_text_date"
         style="@style/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/register_edit_text_date"
-        android:inputType="date"
+        android:textColor="@color/colorBlack"
         app:layout_constraintStart_toStartOf="@id/register_text_date"
         app:layout_constraintTop_toBottomOf="@id/register_text_date" />
 

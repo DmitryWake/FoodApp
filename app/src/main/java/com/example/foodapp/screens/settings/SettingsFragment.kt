@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.foodapp.R
 import com.example.foodapp.database.USER
+import com.example.foodapp.database.signOutAndRestart
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.showToast
 import kotlinx.android.synthetic.main.fragment_settings.*
@@ -47,6 +48,9 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         }
         mEditEmailButton.setOnClickListener {
             showToast("Редактировать email")
+        }
+        settings_button_exit.setOnClickListener {
+            signOutAndRestart()
         }
     }
 
