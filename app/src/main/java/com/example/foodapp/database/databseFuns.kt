@@ -68,6 +68,8 @@ fun updateUserToDatabase() {
     val dataMap = mutableMapOf<String, Any>()
     dataMap[CHILD_FULLNAME] = USER.fullname
     dataMap[CHILD_DATE] = USER.date
+    dataMap[CHILD_EMAIL] = USER.email
+    dataMap[CHILD_MAILING] = USER.mailing
 
     REF_DATABASE_ROOT.child(NODE_USERS).child(CURRENT_UID).updateChildren(dataMap).addOnFailureListener {
         showToast(it.message.toString())

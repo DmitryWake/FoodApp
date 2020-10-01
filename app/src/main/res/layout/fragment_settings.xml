@@ -127,26 +127,42 @@
         android:padding="@dimen/app_padding"
         >
 
-        <EditText
+        <TextView
             android:id="@+id/settings_email_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textColor="@color/colorBlack"
             android:text="example@gmail.com"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/settings_email_edit_text"
+            android:layout_width="wrap_content"
+            android:maxWidth="300dp"
+            android:maxLines="1"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/colorBlack"
+            android:hint="example@gmail.com"
+            android:textColorHint="@color/colorGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="2dp"
+            android:visibility="gone"/>
+
         <CheckBox
             android:id="@+id/settings_check_mailing_box"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@id/settings_check_mailing_text"
             app:layout_constraintTop_toBottomOf="@id/settings_email_text"
             app:layout_constraintBottom_toBottomOf="@id/settings_check_mailing_text"
-            android:background="@drawable/stroke_panel_style"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp" />
+            android:theme="@style/defaultCheckbox"
+            android:clickable="false"
+            android:padding="0dp"
+            />
 
         <TextView
             android:id="@+id/settings_check_mailing_text"
@@ -165,6 +181,15 @@
             app:layout_constraintTop_toTopOf="@id/settings_email_text"
             app:layout_constraintBottom_toBottomOf="@id/settings_check_mailing_text"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/settings_email_done"
+            style="@style/edit_button"
+            android:src="@drawable/ic_done"
+            app:layout_constraintTop_toTopOf="@id/settings_email_text"
+            app:layout_constraintBottom_toBottomOf="@id/settings_check_mailing_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

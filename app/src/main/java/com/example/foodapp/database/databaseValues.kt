@@ -21,6 +21,7 @@ const val CHILD_PHONE = "phone"
 const val CHILD_DATE = "date"
 const val CHILD_IMAGE = "photo"
 const val CHILD_PERMISSION = "permission"
+const val CHILD_MAILING = "mailing"
 
 const val PERMISSION_USER = "user"
 const val PERMISSION_ADMIN = "admin"

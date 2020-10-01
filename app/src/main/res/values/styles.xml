@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppTheme" parent="MaterialDrawerTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -6,6 +6,7 @@
         <item name="android:colorBackground">@color/colorAccent</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
+
 
     <style name="largeText">
         <item name="android:layout_width">wrap_content</item>
@@ -29,7 +30,7 @@
         <item name="android:layout_margin">@dimen/app_margin</item>
         <item name="android:textColorHint">@color/colorGrey</item>
         <item name="android:textColor">@color/colorGrey</item>
-        <item name="android:importantForAutofill">no</item>
+        <item name="android:importantForAutofill" tools:targetApi="o">no</item>
         <item name="android:inputType">phone</item>
         <item name="android:textSize">@dimen/normalText</item>
         <item name="android:padding">10dp</item>
@@ -39,7 +40,7 @@
     <style name="floatingButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:backgroundTint" tools:targetApi="lollipop">@color/colorPrimary</item>
         <item name="android:layout_margin">@dimen/app_margin</item>
     </style>
 
@@ -59,6 +60,11 @@
         <item name="android:padding">15dp</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textSize">@dimen/largeText</item>
+    </style>
+
+    <style name="defaultCheckbox" parent="MaterialDrawerTheme">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
 </resources>

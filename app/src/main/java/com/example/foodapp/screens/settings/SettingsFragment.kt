@@ -3,10 +3,8 @@ package com.example.foodapp.screens.settings
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import android.text.Editable
 import android.view.View
 import android.widget.CheckBox
-import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.foodapp.R
@@ -17,10 +15,7 @@ import com.example.foodapp.screens.DatePickerFragment
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.*
 import kotlinx.android.synthetic.main.fragment_settings.*
-import org.w3c.dom.Text
-import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.util.*
 
 
@@ -36,8 +31,10 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
     private lateinit var mIdText: TextView
 
     private lateinit var mEmailText: TextView
+    private lateinit var mEmailEditText: TextView
     private lateinit var mCheckMailer: CheckBox
     private lateinit var mEditEmailButton: ImageView
+    private lateinit var mEditEmailDone: ImageView
 
     private lateinit var mBonusCount: TextView
 
@@ -55,6 +52,7 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         mIdText.text = "ID: " + USER.id
         mEmailText.text = USER.email
         mDateText.text = USER.date
+        mCheckMailer.isChecked = USER.mailing
     }
 
     private fun initFunc() {
@@ -62,11 +60,41 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
             editUser()
         }
         mEditEmailButton.setOnClickListener {
-            showToast("Редактировать email")
+            editEmail()
         }
         settings_button_exit.setOnClickListener {
             signOutAndRestart()
         }
+    }
+
+    private fun editEmail() {
+        mEmailText.visibility = View.INVISIBLE
+        mEmailEditText.visibility = View.VISIBLE
+        mEmailEditText.text = mEmailText.text
+
+        mEditEmailButton.visibility = View.INVISIBLE
+        mEditEmailDone.visibility = View.VISIBLE
+
+        mCheckMailer.isClickable = true
+
+        mEditEmailDone.setOnClickListener {
+            editEmailDone()
+        }
+    }
+
+    private fun editEmailDone() {
+        mEmailText.text = mEmailEditText.text.toString()
+        USER.email = mEmailText.text.toString()
+        mEmailText.visibility = View.VISIBLE
+
+        mEmailEditText.visibility = View.GONE
+        mCheckMailer.isClickable = false
+        USER.mailing = mCheckMailer.isChecked
+
+        mEditEmailButton.visibility = View.VISIBLE
+        mEditEmailDone.visibility = View.GONE
+
+        updateUserToDatabase()
     }
 
     private fun editUser() {
@@ -118,9 +146,12 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         mIdText = settings_id_text
 
         mEmailText = settings_email_text
-        mEmailText.isFocusable = false
+        mEmailEditText = settings_email_edit_text
         mCheckMailer = settings_check_mailing_box
+        mCheckMailer.isClickable = false
         mEditEmailButton = settings_email_edit
+        mEditEmailDone = settings_email_done
+        mEditEmailDone.visibility = View.GONE
 
         mBonusCount = settings_bonus_count
     }
