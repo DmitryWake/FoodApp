@@ -39,6 +39,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <EditText
+            android:id="@+id/settings_fullname_edit_text"
+            android:layout_width="wrap_content"
+            android:maxWidth="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/colorBlack"
+            android:text="Имя\nФамилия"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:maxLines="2" />
+
         <TextView
             android:id="@+id/settings_date_text"
             android:layout_width="wrap_content"
@@ -47,7 +61,7 @@
             android:textColor="@color/colorBlack"
             android:text="01.01.0001"
             app:layout_constraintTop_toBottomOf="@id/settings_fullname_text"
-            app:layout_constraintEnd_toEndOf="@id/settings_fullname_text"/>
+            app:layout_constraintEnd_toEndOf="@id/settings_fullname_text" />
 
         <ImageView
             android:id="@+id/settings_user_edit"
@@ -56,6 +70,15 @@
             app:layout_constraintBottom_toBottomOf="@id/settings_date_text"
             app:layout_constraintEnd_toEndOf="parent"
             style="@style/edit_button" />
+
+        <ImageView
+            android:id="@+id/settings_user_done"
+            android:src="@drawable/ic_done"
+            app:layout_constraintTop_toTopOf="@id/settings_fullname_text"
+            app:layout_constraintBottom_toBottomOf="@id/settings_date_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/edit_button"
+            android:visibility="gone"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -104,7 +127,7 @@
         android:padding="@dimen/app_padding"
         >
 
-        <TextView
+        <EditText
             android:id="@+id/settings_email_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

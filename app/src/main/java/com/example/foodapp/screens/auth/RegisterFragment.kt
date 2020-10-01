@@ -11,10 +11,7 @@ import androidx.fragment.app.Fragment
 import com.example.foodapp.R
 import com.example.foodapp.database.*
 import com.example.foodapp.screens.DatePickerFragment
-import com.example.foodapp.utilities.DIALOG_DATE
-import com.example.foodapp.utilities.REQUEST_DATE
-import com.example.foodapp.utilities.restartActivity
-import com.example.foodapp.utilities.showToast
+import com.example.foodapp.utilities.*
 import kotlinx.android.synthetic.main.fragment_register.*
 import kotlinx.android.synthetic.main.fragment_register.view.*
 import java.text.SimpleDateFormat
@@ -48,10 +45,7 @@ class RegisterFragment(private val phoneNumber: String, private val uid: String)
 
     private fun initFunc(view: View) {
         mEditDateText.setOnClickListener {
-            val dateDialog = DatePickerFragment.newInstance(Date(101, 5, 18))
-            dateDialog.setTargetFragment(this, REQUEST_DATE)
-            fragmentManager?.let { it1 ->
-                dateDialog.show(it1, DIALOG_DATE) }
+            showDatePickerDialog(this)
         }
 
         view.register_button.setOnClickListener {
