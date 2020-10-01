@@ -12,12 +12,15 @@ import android.widget.TextView
 import com.example.foodapp.R
 import com.example.foodapp.database.USER
 import com.example.foodapp.database.signOutAndRestart
+import com.example.foodapp.database.updateUserToDatabase
 import com.example.foodapp.screens.DatePickerFragment
 import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.utilities.*
 import kotlinx.android.synthetic.main.fragment_settings.*
 import org.w3c.dom.Text
+import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.*
 
 
@@ -74,7 +77,9 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         mEditUserDone.visibility = View.VISIBLE
 
         mDateText.setOnClickListener {
-            showDatePickerDialog(this)
+            val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+            val date = dateFormat.parse(mDateText.text.toString())
+            showDatePickerDialog(this, date)
         }
 
         mEditUserDone.setOnClickListener {
@@ -86,6 +91,7 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
 
     private fun editUserDone() {
         mFullnameText.text = mFullnameEditText.text.toString().replace(' ', '\n')
+        USER.fullname = mFullnameText.text.toString()
         mFullnameText.visibility = View.VISIBLE
 
         mFullnameEditText.visibility = View.GONE
@@ -94,6 +100,9 @@ class SettingsFragment : BaseFragment(R.layout.fragment_settings) {
         mEditUserDone.visibility = View.GONE
 
         mDateText.setOnClickListener(null)
+        USER.date = mDateText.text.toString()
+
+        updateUserToDatabase()
     }
 
     private fun initFields() {

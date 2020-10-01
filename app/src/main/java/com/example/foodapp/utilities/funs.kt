@@ -57,8 +57,8 @@ fun updateVersion() {
 }
 
 //Use with on activity result with REQUEST_DATE
-fun showDatePickerDialog(fragment: Fragment) {
-    val dateDialog = DatePickerFragment.newInstance(Date())
+fun showDatePickerDialog(fragment: Fragment, date: Date = Date()) {
+    val dateDialog = DatePickerFragment.newInstance(date)
     dateDialog.setTargetFragment(fragment, REQUEST_DATE)
         fragment.fragmentManager?.let {
         dateDialog.show(it, DIALOG_DATE)
