@@ -14,11 +14,9 @@ class AppChildEventListener(val onSuccess: (DataSnapshot) -> Unit): ChildEventLi
     }
 
     override fun onChildRemoved(snapshot: DataSnapshot) {
-        onSuccess(snapshot)
     }
 
     override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
-        TODO("Not yet implemented")
     }
 
     override fun onCancelled(error: DatabaseError) {
