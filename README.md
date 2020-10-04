@@ -1,3 +1,2 @@
 # FoodApp
-This app can be used for cafes and restaurants. The administrator will be able to add or remove the product by logging in to their account.
-However, personal settings are made for each restaurant separately. Icons, colors
+Для запуска приложения, нужно склонировать проект, создать проект в FireBase и подключить его к приложению. Для этого нужно в app загрузить файл google-services.json и, возможно, добавить в FireBase SHA-1
