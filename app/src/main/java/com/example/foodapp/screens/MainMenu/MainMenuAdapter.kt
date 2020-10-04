@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodapp.screens.MainMenu.ViewHolders.ViewHolderFactory
 import com.example.foodapp.screens.MainMenu.Views.ViewTypes
 
-class MainMenuAdapter(private val dataList: List<ViewTypes>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MainMenuAdapter(private var dataList: MutableList<ViewTypes>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ViewHolderFactory.getHolder(parent, viewType)
@@ -21,5 +21,10 @@ class MainMenuAdapter(private val dataList: List<ViewTypes>): RecyclerView.Adapt
     }
 
     override fun getItemCount(): Int = dataList.size
+
+    fun addCategory(item: ViewTypes) {
+        dataList.add(item)
+        notifyItemInserted(dataList.size)
+    }
 
 }

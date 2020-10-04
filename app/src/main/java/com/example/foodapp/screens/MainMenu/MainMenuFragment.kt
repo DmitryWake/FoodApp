@@ -14,15 +14,10 @@ import com.example.foodapp.models.MenuItemModel
 import com.example.foodapp.screens.MainMenu.Views.MenuItemView
 import com.example.foodapp.screens.MainMenu.Views.SalesItemView
 import com.example.foodapp.screens.MainMenu.Views.ViewTypes
-import com.example.foodapp.screens.base.BaseFragment
 import com.example.foodapp.screens.edit_content.AddMenuCategoryFragment
-import com.example.foodapp.utilities.APP_ACTIVITY
-import com.example.foodapp.utilities.AppValueEventListener
-import com.example.foodapp.utilities.replaceFragment
-import com.example.foodapp.utilities.showToast
+import com.example.foodapp.utilities.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_main_menu.*
-import kotlinx.android.synthetic.main.menu_item.view.*
 
 class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
 
@@ -57,12 +52,15 @@ class MainMenuFragment : Fragment(R.layout.fragment_main_menu) {
         mRecyclerView = main_menu_recycler_view
 
         val dataList = mutableListOf<ViewTypes>()
-
         dataList.add(SalesItemView())
 
-        dataList.add(MenuItemView(MenuItemModel("Burger")))
-
         mAdapter = MainMenuAdapter(dataList)
+
+        REF_DATABASE_ROOT.child(NODE_CATEGORY).addChildEventListener(AppChildEventListener {
+            it.getValue(MenuItemModel::class.java)?.let { it1 ->
+                mAdapter.addCategory(MenuItemView(it1))
+            }
+        })
 
         mRecyclerView.layoutManager = LinearLayoutManager(this.context)
         mRecyclerView.adapter = mAdapter
