@@ -2,6 +2,7 @@ package com.example.foodapp.screens.MainMenu
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.foodapp.models.MenuItemModel
 import com.example.foodapp.screens.MainMenu.ViewHolders.ViewHolderFactory
 import com.example.foodapp.screens.MainMenu.Views.ViewTypes
 

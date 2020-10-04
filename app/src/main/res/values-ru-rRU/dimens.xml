@@ -3,4 +3,5 @@
     <dimen name="menu_item_width">180dp</dimen>
     <dimen name="menu_item_height">180dp</dimen>
     <dimen name="app_padding">12dp</dimen>
+    <dimen name="sale_item_height">100dp</dimen>
 </resources>

@@ -6,6 +6,6 @@ import kotlinx.android.synthetic.main.sales_list.view.*
 
 class SalesItemHolder(view: View): RecyclerView.ViewHolder(view) {
 
-    private val mRecyclerView = view.sale_recycler_view
+    val mRecyclerView: RecyclerView = view.sale_recycler_view
 
 }
